@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Item Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+
+<style>
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #000000;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: rgb(191, 0, 255);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: rgb(191, 0, 255);
+  color: #ffa8fb;
+}
+
+.nav-link:active {
+  background-color: #000;
+  color: rgb(191, 0, 255)f;
+}
+
+.nav-link.active {
+  background-color: rgb(191, 0, 255);
+  color: #fff;
+}
+
+
+.nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.nav-link:visited {
+  color: #ddd;
+}
+
+
+
+</style>
+
+</head>
+<body>
+  <nav>
+    <ul class="navigation">
+      <li class="nav-item"><a href="Lab-4-Home.html" class="nav-link active">Home</a></li>
+      <li class="nav-item"><a href="Lab-4-About.html" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="Lab-4-Services.html" class="nav-link">Services</a></li>
+      <li class="nav-item"><a href="Lab-4-Projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="Lab-4-Contacts.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
