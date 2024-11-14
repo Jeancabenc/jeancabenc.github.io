@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        body{
+            margin: 0px;
+            background-color: lightgray;
+        }
+        main{
+            margin: 0px auto;
+            background-color: white;
+            max-width: 900px;
+        }
+
+        .row{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .desc{
+            width: 60%;
+        }
+
+        @media (max-width:600px){
+            .row{
+                flex-direction: column-reverse;
+            }
+
+            #feature2{
+                display: none;
+            }
+
+            .desc{
+                width: 100%;
+            }
+
+
+
+        }
+    </Style>
+</head>
+<body>
+    <main>
+        <!--This is row 1-->
+        <div id="feature1" class="row">
+            <div>
+                <img src="https://placehold.co/600x400">
+            </div>
+        
+            
+         <div class="desc">
+            <h1>Title 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Alias veniam nobis obcaecati saepe, laborum exercitationem corrupti, 
+                rem, laboriosam non ad necessitatibus quam minus. Beatae maiores magni sequi obcaecati neque ipsa!</p>
+        </div>
+        </div>
+        <!--this is end of row 1-->
+        <div id="feature2" class="row">\
+            <div>
+                <img src="https://placehold.co/600x400">
+            </div>
+
+            <div class="desc">
+                <h2>Title 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias veniam nobis obcaecati saepe, laborum exercitationem corrupti, 
+                    rem, laboriosam non ad necessitatibus quam minus. Beatae maiores magni sequi obcaecati neque ipsa!</p>
+            </div>
+        </div>
+
+        <!--This is row 2-->
+
+        <div id="feature3" class="row">\
+            <div>
+                <img src="https://placehold.co/600x400">
+            </div>
+
+            <div class="desc">
+                <h3>Title 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Alias veniam nobis obcaecati saepe, laborum exercitationem corrupti, 
+                    rem, laboriosam non ad necessitatibus quam minus. Beatae maiores magni sequi obcaecati neque ipsa!</p>
+            </div>
+        </div>
+
+    </main>
+</body>

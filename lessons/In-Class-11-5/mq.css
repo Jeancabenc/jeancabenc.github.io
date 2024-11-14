@@ -1,0 +1,13 @@
+   @media (max-width:600px){
+            #header{
+                background-color: blueviolet;
+            }
+
+            body{
+                background-color: brown;
+            }
+
+            img{
+                width: 100%;
+            }
+        }
