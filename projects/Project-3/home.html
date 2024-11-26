@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Auto Customz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 100vh;
+            min-width: 1440px;
+            min-height: 1024px;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 88px;
+            height: 88px;
+        }
+
+        .brand-name-header {
+            color: #BF00FF;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .navbar-container {
+            display: flex;
+            gap: 20px;
+            background-color: #000000;
+            width: 456px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-container a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .navbar-container a.active {
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 320px;
+            height: 40px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border: none;
+            font-size: 16px;
+            text-indent: 10px;
+        }
+
+        .search-bar::placeholder {
+            color: #FFFFFF;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .background-image {
+            width: 100%;
+            height: 401px;
+            background-image: url(Background.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .main-heading {
+            font-size: 96px;
+            font-weight: bold;
+            color: #E6E6FA;
+            margin: 0;
+        }
+
+        .cta {
+            font-size: 24px;
+            font-weight: 400;
+            color: #BF00FF;
+            margin-top: 15px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            max-width: 1440px;
+            padding: 50px 0px;
+        }
+
+        .service {
+            text-align: center;
+            width: 400px;
+        }
+
+        .service img {
+            width: 400px;
+            height: 200px;
+        }
+
+        .service-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #6A0DAD;
+            margin-top: 15px;
+        }
+
+        .service-description {
+            font-size: 16px;
+            font-weight: 200;
+            color: #2F4F4F;
+            margin-top: 10px;
+        }
+
+        footer {
+            width: 100%;
+            height: 99px;
+            background-color: #000000;
+        }
+
+        @media (max-width: 768px) {
+    body {
+        min-width: 280px;
+        height: auto;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    .logo {
+        width: 49px;
+        height: 49px;
+    }
+
+    .brand-name-header {
+        display: none;
+    }
+
+    .navbar-container {
+        display: none;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 36px;
+        height: 30px;
+        background-color: #000000;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .menu-icon::before,
+    .menu-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background-color: #FFFFFF;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon::before {
+        top: 5px;
+    }
+    
+    .menu-icon::after {
+        top: 20px;
+    }
+
+    .menu-icon.open::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-icon.open::after {
+        transform: rotate(-45deg);
+    }
+
+    .background-image {
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-image: url(Background.jpg);
+    }
+
+    .main-heading{
+        font-size: 32px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .cta{
+        font-size: 8px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .service img {
+        width: 260px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .service-title,
+    .service-description {
+        display: none;
+    }
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <span class="brand-name-header">AUTO CUSTOMZ</span>
+        </div>
+        <div class="navbar-container">
+            <a href="home.html" class="active">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="services.html">SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search bar">
+    </header>
+
+    <main>
+        <div class="background-image">
+            <h1 class="main-heading">AUTO CUSTOMZ</h1>
+            <p class="cta">We provide the best auto tuning services in town. Transform your ride with auto customz!</p>
+        </div>
+
+        <div class="services">
+            <div class="service">
+                <img src="a-technician-is-in-the-process-of-applying-a-vinyl-NbNPYJzxQI-OED7f8xZiww-BESmJdirQ4uHClg_ReE07Q.jpeg" alt="Exterior Customization">
+                <div class="service-title">Exterior Customization</div>
+                <div class="service-description">Transform the exterior of your vehicle with our top-notch customization services. We offer custom upholstery, state-of-the-art sound systems, ambient lighting, and more.</div>
+            </div>
+            <div class="service">
+                <img src="a-photo-of-a-luxurious-car-interior-with-custom-le-_TAvT6lJQTyd62COKkGdeQ-qni9Es23SrKHvwMrvsQgBg.jpeg" alt="Interior Modification">
+                <div class="service-title">Interior Modification</div>
+                <div class="service-description">Upgrade your car's interior to reflect your unique style and comfort preferences. We offer custom upholstery, state-of-the-art sound systems, ambient lighting, and more.</div>
+            </div>
+            <div class="service">
+                <img src="a-close-up-of-a-car-engine-being-tuned-by-a-mechan-7RcJXEQTQ1W7nx2nemQMuw-Ig7HjJ9IQZS2nj50fcMQ3w.jpeg" alt="Performance Tuning">
+                <div class="service-title">Performance Tuning</div>
+                <div class="service-description">Take your car's performance to the next level with our expert tuning services. From engine upgrades and turbocharging to advanced suspension systems and exhaust modifications, we provide comprehensive solutions to enhance your vehicle's power and handling.</div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('open');
+    const navbar = document.querySelector('.navbar-container');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+});
+    </script>
+</body>
+</html>

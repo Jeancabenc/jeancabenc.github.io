@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Auto Customz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 100vh;
+            min-width: 1440px;
+            min-height: 1024px;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 88px;
+            height: 88px;
+        }
+
+        .brand-name-header {
+            color: #BF00FF;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .navbar-container {
+            display: flex;
+            gap: 20px;
+            background-color: #000000;
+            width: 456px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-container a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .navbar-container a.active {
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 320px;
+            height: 40px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border: none;
+            font-size: 16px;
+            text-indent: 10px;
+        }
+
+        .search-bar::placeholder {
+            color: #FFFFFF;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 50px;
+        }
+
+        h1.main-heading {
+            font-size: 64px;
+            font-weight: bold;
+            color: #6A0DAD;
+            text-align: center;
+            margin-top: 114px;
+        }
+
+        p.subheading {
+            font-size: 20px;
+            color: #2F4F4F;
+            text-align: center;
+            margin-top: 89px;
+            margin-left: 105px;
+            margin-right: 105px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            justify-content: center;
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        .gallery img {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #BF00FF;
+        }
+
+        footer {
+            width: 100%;
+            height: 99px;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <span class="brand-name-header">AUTO CUSTOMZ</span>
+        </div>
+        <div class="navbar-container">
+            <a href="home.html">HOME</a>
+            <a href="gallery.html" class="active">GALLERY</a>
+            <a href="services.html">SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search bar">
+    </header>
+
+    <main>
+        <h1 class="main-heading">GALLERY PROJECTS</h1>
+        <p class="subheading">Explore some of our car customization projects. From exterior modifications to interior upgrades and performance enhancements, see our work in action.</p>
+
+        <div class="gallery">
+            <img src="_A sleek sports car with a custom matte black paint job and red accents, parked in a scenic location.jpeg" alt="Project 1">
+            <img src="_A classic car with a restored and customized interior, featuring vintage details and modern upgrade.jpeg" alt="Project 2">
+            <img src="_A heavily modified muscle car with a custom exhaust system, wide tires, and a low stance.jpeg" alt="Project 3">
+            <img src="_An exotic car with a unique wrap design, parked in a high-end urban setting.jpeg" alt="Project 4">
+            <img src="_A modern car with a custom-built sound system, featuring sleek subwoofers and an illuminated interi.jpeg" alt="Project 5">
+            <img src="_An off-road vehicle with a rugged exterior, equipped with large tires, roof rack, and additional li.jpeg" alt="Project 6">
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Auto Customz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            width: 100%;
+            height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            height: 100px;
+            width: 100%;
+        }
+
+        .logo {
+            width: 88px;
+            height: 88px;
+        }
+
+        .brand-name-header {
+            color: #BF00FF;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        .navbar-container {
+            display: flex;
+            gap: 20px;
+            background-color: #000000;
+            width: 456px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar-container a {
+            color: #FFFFFF;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .navbar-container a.active {
+            font-weight: bold;
+        }
+
+        .search-bar {
+            width: 320px;
+            height: 40px;
+            background-color: #000000;
+            color: #FFFFFF;
+            border: none;
+            font-size: 16px;
+            text-indent: 10px;
+        }
+
+        .search-bar::placeholder {
+            color: #FFFFFF;
+        }
+
+        .mobile-heading {
+            display: none;
+        }
+
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 50px;
+        }
+
+        .service {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1440px;
+            padding: 0 60px 40px;
+        }
+
+        .service img {
+            width: 620px;
+            height: 200px;
+        }
+
+        .service-box {
+            background-color: #000000;
+            width: 267px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-top: -50px;
+
+        }
+
+        .service-title {
+            font-size: 20px;
+            color: #BF00FF;
+            position: absolute;
+        }
+
+        .faq-section {
+            width: 100%;
+            max-width: 1440px;
+            padding: 50px 60px;
+        }
+
+        .faq-title {
+            font-size: 48px;
+            color: #6A0DAD;
+        }
+
+        .faq-question {
+            font-size: 24px;
+            color: #6A0DAD;
+            margin-top: 40px;
+        }
+
+        .faq-answer {
+            font-size: 16px;
+            font-weight: 200;
+            color: #2F4F4F;
+            margin-left: 20px;
+        }
+        
+        footer {
+            width: 100%;
+            height: 99px;
+            background-color: #000000;
+        }
+
+        @media (max-width: 768px){
+            header {
+                padding: 10px;
+                height: auto;
+            }
+
+            .navbar-container {
+                display: none;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .logo {
+                width: 49px;
+                height: 49px;
+            }
+
+            .brand-name-header {
+                display: none;
+            }
+
+            .mobile-heading {
+                display: block;
+                font-size: 32px;
+                font-weight: bold;
+                color: #6A0DAD;
+                text-align: center;
+                margin-top: 42px;
+            }
+
+            .menu-icon {
+                display: block;
+                width: 36px;
+                height: 30px;
+                background-color: #000000;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .menu-icon::before,
+            .menu-icon::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #FFFFFF;
+                transition: transform 0.3s ease;
+            }
+
+            .menu-icon::before {
+                top: 5px;
+            }
+
+            .menu-icon::after {
+                top: 20px;
+            }
+
+            .menu-icon.open::before {
+                transform: rotate(45deg);
+            }
+
+            .menu-icon.open::after {
+                transform: rotate(-45deg);
+            }
+
+            h1.main-heading {
+                font-size: 32px;
+                font-weight: bold;
+                color: #6A0DAD;
+                text-align: center;
+                margin-top: 42px;
+            }
+
+            .service {
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+            }
+
+            .service img {
+                width: 260px;
+                height: 150px;
+            }
+
+            .service-box {
+                width: 207px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: -20px;
+            }
+
+            .service-title {
+                font-size: 14px;
+                font-weight: bold;
+                color: #BF00FF;
+                text-align: center;
+            }
+
+            .service:nth-child(1) {
+                margin-top: 150px;
+            }
+
+            .service:nth-child(2) {
+                margin-top: 246px;
+            }
+
+            .service:nth-child(3) {
+                margin-top: 406px;
+            }
+
+            .service:nth-child(4) {
+                margin-top: 566px;
+            }
+
+            footer {
+                width: 100%;
+                height: 99px;
+                background-color: #000000;
+            }
+
+            .faq-section {
+                display: none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="Logo.png" alt="Logo" class="logo">
+            <span class="brand-name-header">AUTO CUSTOMZ</span>
+        </div>
+        <div class="navbar-container">
+            <a href="home.html">HOME</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="services.html" class="active">SERVICES</a>
+            <a href="#">ABOUT</a>
+            <a href="#">CONTACT</a>
+        </div>
+        <input type="text" class="search-bar" placeholder="Search bar">
+    </header>
+
+    <main>
+        <h1 class="mobile-heading">SERVICES</h1>
+        <div class="service">
+            <div>
+                <img src="_A before-and-after comparison of a car's exterior, showing the transformation from stock to customi.jpeg" alt="Exterior Customization">
+                <div class="service-box">
+                    <span class="service-title">Exterior Customization</span>
+                </div>
+            </div>
+            <div>
+                <img src="_A detailed view of a car's interior after modification, highlighting custom upholstery, a new steer.jpeg" alt="Interior Modification">
+                <div class="service-box">
+                    <span class="service-title">Interior Modification</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service">
+            <div>
+                <img src="__A car on a dyno machine, with a mechanic making adjustments and the car's hood open to reveal the .jpeg" alt="Performance Tuning">
+                <div class="service-box">
+                    <span class="service-title">Performance Tuning</span>
+                </div>
+            </div>
+            <div>
+                <img src="__A car audio system installation scene, showing speakers, subwoofers, and a custom-installed head u.jpeg" alt="Sound System Installation">
+                <div class="service-box">
+                    <span class="service-title">Sound System Installation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2 class="faq-title">FREQUENTLY ASKED QUESTIONS (FAQs)</h2>
+            <div>
+                <p class="faq-question">What types of cars do you work on?</p>
+                <p class="faq-answer">We specialize in customizing a wide variety of vehicles, including sports cars, classic cars, trucks, SUVs, and more. Whether you have a daily driver or a high-performance vehicle, we can help you achieve the look and performance you desire.</p>
+            </div>
+            <div>
+                <p class="faq-question">What customization services do you offer?</p>
+                <p class="faq-answer">Our services include exterior customization, interior modification, performance tuning, sound system installation, and professional detailing. From custom paint jobs and body kits to engine modifications and audio upgrades, we provide comprehensive solutions to enhance your vehicle.</p>
+            </div>
+            <div>
+                <p class="faq-question">How long does it take to complete a customization project?</p>
+                <p class="faq-answer">The duration of a project depends on the complexity of the work and the specific services required. Simple modifications can take a few days, while more extensive customizations may take several weeks. We will provide you with an estimated timeline during the consultation.</p>
+            </div>
+            <div>
+                <p class="faq-question">Do you offer warranties on your services?</p>
+                <p class="faq-answer">Yes, we offer warranties on many of our services and parts. The specifics of the warranty will depend on the type of work performed and the parts used. We stand by the quality of our work and aim to ensure your satisfaction.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+    menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('open');
+    const navbar = document.querySelector('.navbar-container');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+});
+    </script>
+</body>
+</html>
