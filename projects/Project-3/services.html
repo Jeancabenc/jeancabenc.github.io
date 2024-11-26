@@ -93,7 +93,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding-top: 50px;
+            padding-top: 5px;
         }
 
         .service {
@@ -118,6 +118,8 @@
             align-items: center;
             position: relative;
             margin-top: -50px;
+            left: 180px;
+            bottom: 70px;
 
         }
 
@@ -130,25 +132,25 @@
         .faq-section {
             width: 100%;
             max-width: 1440px;
-            padding: 50px 60px;
+            padding: 10px 60px;
         }
 
         .faq-title {
             font-size: 48px;
             color: #6A0DAD;
+            padding-left: 200px;
         }
 
         .faq-question {
             font-size: 24px;
             color: #6A0DAD;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .faq-answer {
             font-size: 16px;
             font-weight: 200;
             color: #2F4F4F;
-            margin-left: 20px;
         }
         
         footer {
@@ -362,10 +364,10 @@
 
     <script>
         const menuIcon = document.querySelector('.menu-icon');
-    menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('open');
-    const navbar = document.querySelector('.navbar-container');
-    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+        menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('open');
+        const navbar = document.querySelector('.navbar-container');
+        navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
 });
     </script>
 </body>
