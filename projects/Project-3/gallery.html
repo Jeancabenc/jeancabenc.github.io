@@ -89,6 +89,7 @@
             color: #FFFFFF;
         }
 
+
         main {
             flex-grow: 1;
             display: flex;
@@ -138,18 +139,51 @@
         }
 
         @media (max-width: 768px){
+            body {
+                min-width: 280px;
+                height: auto;
+            }
             .navbar-container {
                 display: none;
             }
 
-            .hamburger{
+            .fa-solid {
                 display: block;
-                font-size: 30px;
-                color: #000000;
-                cursor: pointer;
+                width: 36px;
+                height: 30px;
+                background-color: #000000;
                 position: relative;
-                top: 10px;
-                left: 234px;
+                cursor: pointer;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+
+            .fa-solid::before,
+            .fa-solid::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background-color: #FFFFFF;
+                transition: transform 0.3s ease;
+            }
+
+            .fa-solid::before {
+                top: 5px;
+            }
+
+            .fa-solid::after {
+                top: 20px;
+            }
+
+            .fa-solid.open::before {
+                transform: rotate(45deg);
+            }
+
+            .fa-solid.open::after {
+                transform: rotate(-45deg);
             }
 
             .main-heading{
@@ -166,31 +200,58 @@
             .logo {
                 width: 49px;
                 height: 49px;
-                margin-left: 0;
+                position: absolute;
+                top: 12px;
+                left: 10px;
             }
 
             .search-bar{
                 display: none;
             }
 
+            .brand-name-header {
+                display: none;
+            }
+
             .gallery {
-                margin-top: -150px;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100px;
             }
 
             .gallery img{
+                display: block;
                 width: 260px;
                 height: 150px;
-                margin-left: 10px;
+                margin-left: 0px;
             }
 
-            .gallery img:nth-child(n+5){
+            .gallery img:nth-child(n+5) {
                 display: none;
             }
 
             .mobile-heading{
                 display: flex;
+                position: absolute;
+                top: 51px;
+                color: #6A0DAD;
             }
+
+            footer {
+                width: 100%;
+                height: 99px;
+                background-color: #000000;
+                position: absolute;
+                top: 820px;
+            }
+            
         }
+                
+
+               
+                
+            
     </style>
 </head>
 <body>
@@ -222,8 +283,19 @@
             <img src="_A modern car with a custom-built sound system, featuring sleek subwoofers and an illuminated interi.jpeg" alt="Project 5">
             <img src="_An off-road vehicle with a rugged exterior, equipped with large tires, roof rack, and additional li.jpeg" alt="Project 6">
         </div>
+
+        <i class="fa-solid"></i>
     </main>
 
     <footer></footer>
+
+    <script>
+        const menuIcon = document.querySelector('.fa-solid');
+        menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('open');
+        const navbar = document.querySelector('.navbar-container');
+        navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+});
+    </script>
 </body>
 </html>

@@ -189,17 +189,20 @@
         display: none;
     }
 
-    .menu-icon {
+    .fa-solid {
         display: block;
         width: 36px;
         height: 30px;
         background-color: #000000;
         position: relative;
         cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
     }
 
-    .menu-icon::before,
-    .menu-icon::after {
+    .fa-solid::before,
+    .fa-solid::after {
         content: "";
         position: absolute;
         left: 0;
@@ -209,19 +212,19 @@
         transition: transform 0.3s ease;
     }
 
-    .menu-icon::before {
+    .fa-solid::before {
         top: 5px;
     }
-    
-    .menu-icon::after {
+
+    .fa-solid::after {
         top: 20px;
     }
 
-    .menu-icon.open::before {
+    .fa-solid.open::before {
         transform: rotate(45deg);
     }
 
-    .menu-icon.open::after {
+    .fa-solid.open::after {
         transform: rotate(-45deg);
     }
 
@@ -305,12 +308,14 @@
                 <div class="service-description">Take your car's performance to the next level with our expert tuning services. From engine upgrades and turbocharging to advanced suspension systems and exhaust modifications, we provide comprehensive solutions to enhance your vehicle's power and handling.</div>
             </div>
         </div>
+
+        <i class="fa-solid"></i>
     </main>
 
     <footer></footer>
 
     <script>
-        const menuIcon = document.querySelector('.menu-icon');
+        const menuIcon = document.querySelector('.fa-solid');
     menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('open');
     const navbar = document.querySelector('.navbar-container');
